@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="insert_link">
+            <h3>Введите данные о ресурсе</h3>
+            <form action="cgi/insert_link.php" name="insert_link" autocomplete="off" method="get" accept-charset="utf-8">
+                <table>
+                    <tr>
+                        <td><div class="form_labels">Название ресурса</div></td>
+                        <td><input name="name" type="text" placeholder="Введите название ресурса..." autocomplete="off" required/></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form_labels">URL</div></td>
+                        <td><input name="link_URL" type="text" placeholder="Введите ссылку на ресурс..." autocomplete="off" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                    </tr>
+                </table>
+                <div class="form_labels">Описание</div><div class="clearfix"></div>
+                <textarea name="description" cols="80" rows="5" placeholder="Введите краткое описание ресурса" autocomplete="off"></textarea>
+                <fieldset>
+                    <legend>Категория</legend>
+                    <input name="cat_standards" type="checkbox" />Стандарты
+                    <input name="cat_tutorials" type="checkbox" />Учебники
+                    <input name="cat_references" type="checkbox" />Справочники
+                    <input name="cat_devtools" type="checkbox" />Инструменты разработчика
+                    <input name="cat_frameworks" type="checkbox" />Фреймворки
+                    <input name="cat_libraries" type="checkbox" />Библиотеки
+                    <input name="cat_languages" type="checkbox" />Языки программирования
+                    <input name="cat_repositories" type="checkbox"/>Репозитории
+                    <input name="cat_graphdesign" type="checkbox"/>Графический дизайн
+                    <input name="cat_other" type="checkbox" />Прочее
+                </fieldset>
+                <fieldset>
+                    <legend>Рейтинг</legend>
+                    <input type="radio" name="rating" value="1" checked>1
+                    <input type="radio" name="rating" value="2">2
+                    <input type="radio" name="rating" value="3">3
+                    <input type="radio" name="rating" value="4">4
+                    <input type="radio" name="rating" value="5">5
+                </fieldset>
+                <input type="submit" value="Внести данные">
+                <input type="reset" value="Сбросить">
+            </form>
+        </div>
+    </body>
+</html>
